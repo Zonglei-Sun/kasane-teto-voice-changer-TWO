@@ -6,45 +6,55 @@ import os
 import random
 import string
 import time
-
+#imports necessary libaries
 
 
 mixer.init(devicename="CABLE Input (VB-Audio Virtual Cable)")
-
+#pygame connects to CABLE INPUT as the recording device
 
 def generate_random_string(length=8):
     return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
-
+    #generates random .wav file name 
 
 def speak_sync(text):
     engine = pyttsx3.init()
     engine.setProperty('rate', 125)
+    #activates the text-to-speech software and sets the current speaking rate
 
     try:
-        engine.endLoop()
+        engine.endLoop() #runs the code
     except:
-        pass
+        pass #if exception occurs, pass
+
     text = text.replace(",", "")
     name = f"{generate_random_string()}.wav"
+    #text creates what the speech-to-text software translates and the name makes the .wav name
 
     engine.save_to_file(text,name)
-    #engine.say(text)
-    engine.runAndWait()
+    #saves voice to a file, parameters are self explanatory
+
+    engine.runAndWait() 
+    # runs and waits for the file to finish the text-to-speech
     engine.stop()
 
     time.sleep(0.1)
+    #little breathing space for the program
 
     mixer.music.load(name)
     mixer.music.play()
+    #loads the name of the .wav file into pygame's mixer and plays it
 
     while mixer.music.get_busy():
         time.sleep(0.1)
+    #waits for the file to finish
 
     mixer.music.unload()
     os.remove(name)
+    #unloads the file from mixer and deletes it
 
 async def speak(text: str):
     await asyncio.to_thread(speak_sync, text)
+    #allows the speak_sync and text to run at the same time without delay
 
 async def main():
     while True:
