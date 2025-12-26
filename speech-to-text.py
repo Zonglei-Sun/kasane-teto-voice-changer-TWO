@@ -55,9 +55,9 @@ async def main():
 
 
         if text.strip():  # Only speak if text detected
-            await speak(text)
+            await speak(text) 
 
 
-       
+      
 if __name__ == '__main__':
     asyncio.run(main())
