@@ -1,8 +1,8 @@
-name: New Project
+﻿name: New Project
 comment: ""
 output_dir: Vocal
 cache_dir: UCache
-ustx_version: "0.6"
+ustx_version: "0.7"
 resolution: 480
 bpm: 120
 beat_per_bar: 4
@@ -216,6 +216,11 @@ exp_selectors:
 - clr
 - eng
 - vel
+- vol
+- atk
+- dec
+- gen
+- bre
 exp_primary: 0
 exp_secondary: 1
 key: 0
@@ -227,7 +232,7 @@ tempos:
 - position: 0
   bpm: 120
 tracks:
-- singer: 重音テト (かだねてと) 音声ライブラリー
+- singer: TETO-English-150401\重音テト音声ライブラリー
   phonemizer: OpenUtau.Plugin.Builtin.EnXSampaPhonemizer
   renderer_settings:
     renderer: WORLDLINE-R
@@ -241,3 +246,61 @@ tracks:
   voice_color_names:
   - ""
 voice_parts:
+- duration: 1440
+  name: New Part
+  comment: ""
+  track_no: 0
+  position: -480
+  notes:
+  - position: 880
+    duration: 400
+    tone: 63
+    lyric: this
+    pitch:
+      data:
+      - {x: -40, y: 0, shape: io}
+      - {x: 40, y: 0, shape: io}
+      snap_first: true
+    vibrato: {length: 0, period: 175, depth: 25, in: 10, out: 10, shift: 0, drift: 0, vol_link: 0}
+    phoneme_expressions: []
+    phoneme_overrides: []
+  curves: []
+- duration: 480
+  name: New Part
+  comment: ""
+  track_no: 0
+  position: 0
+  notes:
+  - position: 0
+    duration: 400
+    tone: 62
+    lyric: Will
+    pitch:
+      data:
+      - {x: -40, y: 0, shape: io}
+      - {x: 40, y: 0, shape: io}
+      snap_first: true
+    vibrato: {length: 0, period: 175, depth: 25, in: 10, out: 10, shift: 0, drift: 0, vol_link: 0}
+    phoneme_expressions: []
+    phoneme_overrides: []
+  curves: []
+- duration: 640
+  name: New Part
+  comment: ""
+  track_no: 0
+  position: 800
+  notes:
+  - position: 0
+    duration: 400
+    tone: 61
+    lyric: work?
+    pitch:
+      data:
+      - {x: -40, y: 0, shape: io}
+      - {x: 40, y: 0, shape: io}
+      snap_first: true
+    vibrato: {length: 0, period: 175, depth: 25, in: 10, out: 10, shift: 0, drift: 0, vol_link: 0}
+    phoneme_expressions: []
+    phoneme_overrides: []
+  curves: []
+wave_parts: []
