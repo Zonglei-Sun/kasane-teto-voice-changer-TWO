@@ -1,4 +1,4 @@
-name: New Project
+ name: New Project
 comment: ""
 output_dir: Vocal
 cache_dir: UCache
@@ -241,3 +241,61 @@ tracks:
   voice_color_names:
   - ""
 voice_parts:
+- duration: 300
+  name: New Part
+  comment: ""
+  track_no: 0
+  position: 0
+  notes:
+  - position: 0
+    duration: 300
+    tone: 62
+    lyric: The
+    pitch:
+      data:
+      - {x: -40, y: 0, shape: io}
+      - {x: 40, y: 0, shape: io}
+      snap_first: true
+    vibrato: {length: 0, period: 175, depth: 25, in: 10, out: 10, shift: 0, drift: 0, vol_link: 0}
+    phoneme_expressions: []
+    phoneme_overrides: []
+  curves: []
+- duration: 700
+  name: New Part
+  comment: ""
+  track_no: 0
+  position: 300
+  notes:
+  - position: 0
+    duration: 700
+    tone: 62
+    lyric: Epstein
+    pitch:
+      data:
+      - {x: -40, y: 0, shape: io}
+      - {x: 40, y: 0, shape: io}
+      snap_first: true
+    vibrato: {length: 0, period: 175, depth: 25, in: 10, out: 10, shift: 0, drift: 0, vol_link: 0}
+    phoneme_expressions: []
+    phoneme_overrides: []
+  curves: []
+- duration: 500
+  name: New Part
+  comment: ""
+  track_no: 0
+  position: 1000
+  notes:
+  - position: 0
+    duration: 500
+    tone: 62
+    lyric: Biles.
+    pitch:
+      data:
+      - {x: -40, y: 0, shape: io}
+      - {x: 40, y: 0, shape: io}
+      snap_first: true
+    vibrato: {length: 0, period: 175, depth: 25, in: 10, out: 10, shift: 0, drift: 0, vol_link: 0}
+    phoneme_expressions: []
+    phoneme_overrides: []
+  curves: []
+wave_parts: []
