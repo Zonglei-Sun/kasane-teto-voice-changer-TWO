@@ -11,6 +11,7 @@ This quiz covers the basics of Python including:
 """
 
 import sys
+import os
 
 # Quiz questions with answers and explanations
 QUESTIONS = [
@@ -318,8 +319,9 @@ QUESTIONS = [
 
 def clear_screen():
     """Clear the console screen (works on both Windows and Unix-like systems)"""
-    import os
-    os.system('cls' if os.name == 'nt' else 'clear')
+    # Using print with newlines as a safer alternative to os.system
+    # This provides visual separation without shell command execution
+    print('\n' * 100)
 
 def display_question(question_num, total_questions, question_data):
     """Display a single question with its options"""
