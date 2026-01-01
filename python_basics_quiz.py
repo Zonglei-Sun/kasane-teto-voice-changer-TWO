@@ -11,7 +11,6 @@ This quiz covers the basics of Python including:
 """
 
 import sys
-import os
 
 # Quiz questions with answers and explanations
 QUESTIONS = [
